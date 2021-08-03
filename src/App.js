@@ -1,9 +1,9 @@
-import './App.css';
+import './App.scss';
+import 'reset-css';
 
 function App() {
   return (
     <div className="App">
-      
     </div>
   );
 }
