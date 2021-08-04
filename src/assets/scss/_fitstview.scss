@@ -1,0 +1,12 @@
+#firstView {
+    margin: 16px 24px;
+    height: 100vh;
+    
+    .top__siteTitle {
+        position: absolute;
+        right: calc(0px - 24px);
+        transform: rotate(90deg);
+        top: 145px;
+        font-size: 6rem;
+    }
+}

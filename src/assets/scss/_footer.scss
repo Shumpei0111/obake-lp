@@ -1,0 +1,36 @@
+@use './variables' as v;
+
+#footer {
+    position: relative;
+    width: 100%;
+    background-color: v.$red;
+    height: 322px;
+    padding: 0 24px;
+    text-align: center;
+
+    .to_top_btn {
+        width: 324px;
+        margin: -24rem auto;
+        cursor: pointer;
+    }
+
+    .footer__logo {
+        width: 284px;
+        position: absolute;
+        left: 24px;
+        top: 10rem;
+    }
+
+    .credit {
+        font-size: 12px;
+        text-align: center;
+        padding-top: 32px;
+    }
+
+    .copyright {
+        font-style: normal;
+        font-size: 12px;
+        text-align: center;
+        padding-top: 32px;
+    }
+}
