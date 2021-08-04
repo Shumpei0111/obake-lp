@@ -3,10 +3,67 @@
     height: 100vh;
     
     .top__siteTitle {
-        position: absolute;
-        right: calc(0px - 24px);
-        transform: rotate(90deg);
-        top: 145px;
-        font-size: 6rem;
+        animation: siteTitle 2s infinite;
+
+        .top__logo {
+            position: absolute;
+            width: 170px;
+            top: 10vh;
+            left: 0;
+            right: 0;
+            margin: auto;
+            transition: 2s;
+            opacity: 0;
+        }
+
+        .isLoaded {
+            opacity: 1;
+        }
+
+        @keyframes siteTitle {
+            0% {
+                transform: none;
+              }
+              33% {
+                transform: none;
+              }
+              33.3% {
+                transform: skewX(4deg);
+              }
+              33.6% {
+                transform: skewX(-1deg);
+              }
+              33.9% {
+                transform: none;
+              }
+              66% {
+                transform: none;
+              }
+              66.3% {
+                transform: skewX(2deg);
+              }
+              66.6% {
+                transform: skewX(-2deg);
+              }
+              66.9% {
+                transform: none;
+              }
+              77% {
+                transform: none;
+              }
+              77.3% {
+                transform: skewX(2deg);
+              }
+              77.6% {
+                transform: skewX(-6deg);
+              }
+              77.9% {
+                transform: none;
+              }
+        }
+    }
+
+    .top__catchCopy {
+        font-size: 2rem;
     }
 }
