@@ -1,0 +1,14 @@
+#attention {
+    margin-bottom: 24rem;
+
+    .attentions {
+        display: flex;
+        justify-content: center;
+
+        &__item {
+            -ms-writing-mode: tb-rl;
+            writing-mode: vertical-rl;
+            padding: 0 24px;
+        }
+    }
+}

@@ -1,13 +1,18 @@
-import './App.scss';
 import 'reset-css';
+import './App.scss';
 
-import { FirstView, Footer } from './components/index.js';
+import { FirstView, Story, Mission, Ranking, Plan, Attention, Footer } from './components/index.js';
 
 
 function App() {
   return (
     <div className="App">
         <FirstView />
+        <Story />
+        <Mission />
+        <Ranking />
+        <Plan />
+        <Attention />
         <Footer />
     </div>
   );
