@@ -1,0 +1,83 @@
+@use './variables' as v;
+
+#mission {
+
+    &.mission {
+        height: 800px;
+
+        .mission__bg__wrapper {
+            overflow: hidden;
+            position: relative;
+            margin-left: calc(-50vw + 50%);
+            margin-right: calc(-50vw + 50%);
+        }
+
+        .mission__bg {
+            background: url(../img/nolan-issac-K5sjajgbTFw-unsplash.jpg) no-repeat center center fixed;
+            width: 100%;
+            height: 600px;
+            position: relative;
+            left: 0;
+            background-size: cover;
+            filter: brightness(50%) grayscale(100%);
+            -webkit-filter: brightness(50%) grayscale(100%);
+        }
+
+        .mission__bg:after {
+            content: "";
+            animation: grain 8s steps(10) infinite;
+            -webkit-animation: grain 8s steps(10) infinite;
+            background-image: url(../img/nosie_cover.png);
+            height: 300%;
+            width: 300%;
+            opacity: 0.3;
+            top: -100%;
+            left: -50%;
+            position: fixed;
+        }
+
+        .mission__wrapper {
+            margin: 0 auto;
+
+            .mission__txt_filed {
+                position: relative;
+                color: v.$black;
+                width: 680px;
+                margin: auto;
+
+                .mission__intro {
+                    padding: 6rem 0 2.4rem;
+                    font-size: 2rem;
+
+                    .mission__serif {
+                        font-size: 2.5rem;
+                        font-feature-settings: "palt";
+                    }
+
+                    span {
+                        letter-spacing: -4px;
+                    }
+                }
+
+                .mission__content {
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    margin: auto;
+                    top: -60rem;
+                    text-shadow: v.$textShadow;
+
+
+                    &.content__body {
+                        top: -39rem;
+                    }
+
+                    span {
+                        color: v.$red;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+    }
+}

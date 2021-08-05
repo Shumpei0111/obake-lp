@@ -64,7 +64,7 @@
         text-align: center;
         opacity: 0;
         transition: 2s;
-        text-shadow: 0px 2px 3px rgb(0 0 0 / 30%);
+        text-shadow: v.$textShadow;
 
         span {
             color: v.$red;
