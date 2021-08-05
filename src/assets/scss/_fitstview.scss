@@ -1,69 +1,78 @@
+@use './variables' as v;
+
 #firstView {
-    margin: 16px 24px;
+    position: relative;
     height: 100vh;
+    margin-bottom: 120px;
+
+    .top__bg__wrapper {
+        overflow: hidden;
+    }
+
+    .top__bg {
+        background: url(../img/lorenz-huter-5jxFc5QlcAc-unsplash.jpg) no-repeat center left fixed;
+        filter: brightness(70%);
+        -webkit-filter: brightness(70%);
+        height: 100vh;
+    }
+
+    .top__bg:after {
+        content: "";
+        animation: grain 8s steps(10) infinite;
+        -webkit-animation: grain 8s steps(10) infinite;
+        background-image: url(../img/nosie_cover.png);
+        height: 300%;
+        width: 300%;
+        opacity: 0.3;
+        top: -100%;
+        left: -50%;
+        position: fixed;
+    }
+
+    .isLoaded {
+        opacity: 1;
+    }
     
     .top__siteTitle {
         animation: siteTitle 2s infinite;
+        position: absolute;
+        top: 20vh;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 170px;
 
         .top__logo {
-            position: absolute;
-            width: 170px;
-            top: 10vh;
-            left: 0;
-            right: 0;
-            margin: auto;
+            width: 190px;
             transition: 2s;
             opacity: 0;
-        }
+            filter: drop-shadow(-2px 5px 4px #1F0000);
 
-        .isLoaded {
-            opacity: 1;
-        }
-
-        @keyframes siteTitle {
-            0% {
-                transform: none;
-              }
-              33% {
-                transform: none;
-              }
-              33.3% {
-                transform: skewX(4deg);
-              }
-              33.6% {
-                transform: skewX(-1deg);
-              }
-              33.9% {
-                transform: none;
-              }
-              66% {
-                transform: none;
-              }
-              66.3% {
-                transform: skewX(2deg);
-              }
-              66.6% {
-                transform: skewX(-2deg);
-              }
-              66.9% {
-                transform: none;
-              }
-              77% {
-                transform: none;
-              }
-              77.3% {
-                transform: skewX(2deg);
-              }
-              77.6% {
-                transform: skewX(-6deg);
-              }
-              77.9% {
-                transform: none;
-              }
+            &.isLoaded {
+                @extend .isLoaded;
+            }
         }
     }
 
     .top__catchCopy {
+        position: absolute;
+        top: 4rem;
+        margin: auto;
+        left: 0;
+        right: 0;
         font-size: 2rem;
+        text-align: center;
+        opacity: 0;
+        transition: 2s;
+        text-shadow: 0px 2px 3px rgb(0 0 0 / 30%);
+
+        span {
+            color: v.$red;
+            font-weight: bold;
+        }
+
+        &.isLoaded {
+            @extend .isLoaded;
+        }
     }
 }
