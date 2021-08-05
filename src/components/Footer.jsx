@@ -12,6 +12,7 @@ import { ScrollToPlugin } from 'gsap/all';
 // import { ScrollTrigger } from 'gsap/all';
 
 const Footer = () => {
+    
     useEffect(() => {
         gsap.registerPlugin(ScrollToPlugin);
     }, [])
@@ -19,7 +20,7 @@ const Footer = () => {
     const clickToTop = () => {
         gsap.to( window, {
             scrollTo: 0,
-            duration: 0.2,
+            duration: 0.3,
         } )
     };
 
