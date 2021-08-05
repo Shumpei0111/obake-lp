@@ -28,7 +28,8 @@ p {
 }
 
 .contents {
-    margin: 0 24px 168px;
+    margin: 0 auto 168px;
+    max-width: 900px;
 }
 
 @-webkit-keyframes hover {
