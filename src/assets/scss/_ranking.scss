@@ -1,2 +1,48 @@
+@use './variables' as v;
 
-#ranking {}
+#ranking {
+
+    .ranking__container {
+        display: flex;
+        justify-content: space-between;
+        margin: 2.4rem auto;
+        margin-bottom: 2.4rem;
+        width: 600px;
+
+        .ranking__wrapper {
+
+            .ranking__label {
+                font-weight: bold;
+                font-size: 2rem;
+            }
+        }
+    }
+
+    .ranking__other_ranks {
+        text-align: center;
+
+        p {
+            cursor: pointer;
+            display: inline-block;
+            padding: 1.6rem;
+            border: 1px solid;
+            border-radius: 4px;
+            transition: .4s;
+        }
+
+        p:hover {
+            background: v.$white;
+            color: v.$black;
+            -webkit-animation: hover 0.1s ease forwards;
+            animation: hover 0.1s ease forwards;
+        }
+    }
+
+    .ranking__sns_intro {
+        text-align: center;
+        
+        p {
+            padding: 1.6rem;
+        }
+    }
+}
