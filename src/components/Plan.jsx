@@ -1,5 +1,5 @@
 import Slider from 'react-slick';
-import React, { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
@@ -139,26 +139,6 @@ const Plan = () => {
         },
     ];
 
-    const [state, setState] = useState({
-        nav1: null,
-        nav2: null
-      });
-    
-      const slider1 = useRef();
-      const slider2 = useRef();
-    
-      useEffect(() => {
-        setState({
-          nav1: slider1.current,
-          nav2: slider2.current
-        });
-      }, []);
-    
-      const {
-        nav1,
-        nav2
-      } = state;
-
     const settings = {
         dots: false,
         infinite: false,
@@ -183,46 +163,20 @@ const Plan = () => {
         ]
     }
 
-    const settingsSliderNav = {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        dots: false,
-        arrows: false,
-        focusOnSelect: true,
-      }
-
-    
-
     return (
         <div id="plan" className="contents">
             <h2>開催日時</h2>
             <div className="plan__wrapper">
                 <div className="plan__container">
-                    <React.Fragment>
-                        <Slider {...settings} asNavFor={nav2} ref={slider => (slider1.current = slider)} className="plan__plan_box">
-                            {days.map( d => {
-                                return (
-                                    <div className="plan_box_item" key={d}>
-                                        <div>{d.day}({d.week})</div>
-                                    </div>
-                                )})
-                            }
-                        </Slider>
-                        <Slider {...settingsSliderNav} asNavFor={nav1} ref={slider => (slider2.current = slider)}>
-                            {days.map( (d,ind) => {
-                                return (
-                                    <div className="plan_genres" key={d}>
-                                        <div>{tourPlan.tour}</div>
-                                        <div>{d.plan.tour.price.ad}円{ind}</div>
-                                        <div>{d.plan.tour.price.ch}円</div>
-                                        <br />
-                                        <div>{d.plan.only.price.ad}円</div>
-                                        <div>{d.plan.only.price.ch}円</div>
-                                    </div>
-                                )
-                            } )}
-                        </Slider>
-                    </React.Fragment>
+                    <Slider {...settings} className="plan__plan_box">
+                        {days.map( d => {
+                            return (
+                                <div className="plan_box_item" key={d}>
+                                    <div>{d.day}({d.week})</div>
+                                </div>
+                            )})
+                        }
+                    </Slider>
                 </div>
             </div>
         </div>
