@@ -10,7 +10,7 @@ const Mission = () => {
                 </div>
                 <div className="mission__txt_filed">
                     <div className="mission__intro mission__content">
-                        <p class="mission__serif">「あの火事は絶対におかしい――」</p>
+                        <p className="mission__serif">「あの火事は絶対におかしい――」</p>
                         <p>実際の廃校を舞台に、謎を解いて火事の原因を突き止めろ！</p>
                     </div>
                     <div className="content__body mission__content">
