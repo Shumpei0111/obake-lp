@@ -1,1 +1,20 @@
-#plan {}
+#plan {
+
+    .plan__wrapper {
+
+        .plan__container {
+
+            .plan__plan_box {
+                display: flex;
+                text-align: center;
+
+                .plan_box_item {
+                    padding: 1.6rem;
+                    border: 1px solid;
+                    border-radius: 4px;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
