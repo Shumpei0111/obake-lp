@@ -21,12 +21,12 @@ const FirstView = () => {
             <h1 className="top__siteTitle">
                 <img src={Logo} alt={siteTitle.kanji} className={`top__logo ${loaded ? "isLoaded" : "" }` } />
             </h1>
-            <p className={`top__catchCopy ${loaded ? "isLoaded" : "" }` }>実際の廃校を舞台に<span>謎解き</span> × <span>お化け屋敷</span>を体験！</p>
+            <p className={`top__catchCopy ${loaded ? "isLoaded" : "" }` }>日本初！実際の廃校を舞台に<span>謎解き</span> × <span>お化け屋敷</span>の体験型アトラクション、この夏開催！</p>
             <MenuList type="top" />
-            <p>不可解な火事</p>
-            <p>行方不明の7人</p>
-            <p>廃校を探索し事件を解決に導け！</p>
-            <p className="top__appeal">日本初ホラーミステリーツアー</p>
+            <p className="top__intro intro_1">不可解な火事</p>
+            <p className="top__intro intro_2">行方不明の7人</p>
+            <p className="top__intro intro_3">廃校を探索し事件を解決に導け！</p>
+            <p className="top__intro intro_4 top__appeal">日本初ホラーミステリーツアー</p>
         </div>
     )
 }

@@ -5,7 +5,7 @@ export const siteTitle = {
     en   : "Exploring Closed Schools"
 };
 
-export const catchCopy = "実際の廃校を舞台に謎解き × お化け屋敷を体験！";
+export const catchCopy = "日本初！実際の廃校を舞台に謎解き × お化け屋敷を体験型アトラクション、この夏開催！";
 
 // 画面に表示されるコンテンツメニュー（アンカーリンクになりえるコンテンツ名）のリスト
 export const menus = [ "ストーリー", "ミッション", "ランキング", "開催日時", "注意事項" ];
