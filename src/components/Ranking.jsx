@@ -4,9 +4,10 @@ const Ranking = () => {
     return (
         <div id="ranking" className="contents">
             <h2>ランキング</h2>
-            <div>
+            <div className="ranking__caption">
+                <p>Twitter連動企画「クリアタイムランキング」開催中！</p>
                 <p>期間中、クリアタイムのランキングを掲載します。</p>
-                <p>デイリーランキングと総合ランキングを毎日発表！Twitterとも連動しているので、逐一チェックすることができます。</p>
+                <p><span>デイリーランキング</span>と<span>総合ランキング</span>を毎日発表！クリアタイム1位を目指せ！</p>
             </div>
             <div className="ranking__container">
                 <div className="ranking__wrapper">

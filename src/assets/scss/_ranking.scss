@@ -2,6 +2,18 @@
 
 #ranking {
 
+    .ranking__caption {
+
+        p {
+            margin: 0 auto;
+            max-width: 530px;
+            width: 80%;
+        }
+        span {
+            color: v.$red;
+        }
+    }
+
     .ranking__container {
         display: flex;
         justify-content: space-between;
