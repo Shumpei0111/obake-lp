@@ -1,0 +1,52 @@
+#map {
+    margin: 2.4rem auto;
+    width: 100%;
+    text-align: center;
+
+    .map__img {
+        position: relative;
+    }
+
+    .map__container {
+        overflow: hidden;
+        position: relative;
+        margin-left: calc(-50vw + 50%);
+        margin-right: calc(-50vw + 50%);
+
+        .map__wrapper {
+            position: relative;
+            overflow: hidden;
+            width: 640px;
+            height: 300px;
+            margin: auto;
+            filter: brightness(50%) grayscale(100%);
+            -webkit-filter: brightness(50%) grayscale(100%); 
+        }
+    
+        .map__wrapper:after {
+            content: "";
+            animation: grain 8s steps(10) infinite;
+            -webkit-animation: grain 8s steps(10) infinite;
+            background-image: url(../img/nosie_cover2.png);
+            height: 300%;
+            width: 300%;
+            opacity: 0.3;
+            top: -100%;
+            left: -50%;
+            position: absolute;
+        }
+    }
+
+    .location__wrapper {
+        display: flex;
+        justify-content: center;
+
+        .location__item {
+            margin: 2rem 4rem;
+
+            .address {
+                font-size: 1.2rem;
+            }
+        }
+    }
+}

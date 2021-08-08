@@ -1,3 +1,5 @@
+@use './variables' as v;
+
 #plan {
 
     .plan__wrapper {
@@ -8,12 +10,93 @@
                 display: flex;
                 text-align: center;
 
-                .plan_box_item {
+                .plan_box__item {
                     padding: 1.6rem;
-                    border: 1px solid;
+                    border: 1px solid v.$grey;
                     border-radius: 4px;
                     cursor: pointer;
+                    margin: 0 0.4rem;
+
+                    &_day {
+                        font-weight: bold;
+                        font-size: 1.6rem;
+                    }
+
+                    &_week {
+                        font-size: 1.2rem;
+                    }
+
+                    &:hover {
+                        -webkit-animation: hover 0.1s ease forwards;
+                        animation: hover 0.1s ease forwards;
+                    }
                 }
+
+                .slick-current {
+
+                    .plan_box__item {
+                        background: v.$red;
+                        border-color: v.$white;
+                    }
+                }
+            }
+
+            .plan__card {
+
+                .plan__name {
+                    font-size: 2.5rem;
+                    font-weight: bold;
+                    display: inline-block;
+                }
+
+                .plan__plan {
+                    display: inline-block;
+                    position: absolute;
+                    right: 1rem;
+                    font-size: 1.2rem;
+                }
+
+                .plan__plan_kind_wrapper {
+                    text-align: right;
+                    font-size: 1.6rem;
+                    font-weight: bold;
+                    letter-spacing: 0.12rem;
+
+                    .plan__plan_kind {
+                        font-size: 1.2rem;
+                        font-weight: normal;
+                        padding-right: 1rem;
+                        letter-spacing: 0.1rem;
+                    }
+                }
+
+                .changing {
+                    -webkit-animation: hover 0.1s ease forwards;
+                    animation: hover 0.1s ease forwards;
+                }
+
+                .ch {
+                    .ch_cap { 
+                        font-size: 1.2rem;
+                        display: blocks;
+                    }
+                }
+
+                .common {
+                    width: 98%;
+                    margin: auto;
+                    padding: 1rem 2rem;
+                    border: 1px solid v.$grey;
+                    border-radius: 4px;
+                    position: relative;
+                }
+
+                .tour_detail {
+                    margin-top: 2rem;
+                    margin-bottom: 2rem;
+                }
+
+                .only_detail {}
             }
         }
     }
