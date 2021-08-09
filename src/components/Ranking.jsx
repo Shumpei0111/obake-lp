@@ -36,7 +36,8 @@ const Ranking = () => {
             </div>
             <div className="ranking__sns_intro">
                 <p>イベント公式Twitterをフォロー！</p>
-                <a href="" target="_blank" rel="nofollow noopener">Twitter</a>
+                <p>↓</p>
+                <a href="https://twitter.com/seventhseven" target="_blank" rel="noreferrer noopener">Twitter</a>
             </div>
         </div>
     )
