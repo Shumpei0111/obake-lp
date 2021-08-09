@@ -233,7 +233,7 @@ const Plan = () => {
 
     useEffect(() => {
         changeDate();
-    }, [tourPriceAd, tourPriceCh, onlyPriceAd, onlyPriceCh]);
+    });
 
     const todayDate = "7月1日";
 
