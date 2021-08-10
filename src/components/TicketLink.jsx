@@ -16,14 +16,16 @@ const TicketLink = () => {
     useEffect( () => {
         // Mutation Observer
         setTimeout( () => {
-            const $ = document.getElementById( "story" );
-            console.log($);
+            const $ = document.getElementById( "firstView" );
 
             function intersectCallback(entry) {
                 console.log("en1", entry);
                 console.log("en2",entry[0].isIntersecting);
-                if(entry[0].isIntersecting) {
+                if(!entry[0].isIntersecting) {
                     setActiveClass();
+                
+                } else {
+                    disableActiveClass();
                 }
             }
 
@@ -32,9 +34,13 @@ const TicketLink = () => {
                 setOnDisp(true);
             }
 
+            function disableActiveClass() {
+                setOnDisp(false);
+            }
+
             const obsOptions = {
                 root: null,
-                rootMargin: "-20% 0px",
+                rootMargin: "-50% 0px",
                 threshold: 0
             };
             
