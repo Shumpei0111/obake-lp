@@ -12,6 +12,11 @@
         width: 324px;
         margin: -24rem auto;
         cursor: pointer;
+
+        &:hover {
+            -webkit-animation: hover 0.1s ease forwards;
+            animation: hover 0.1s ease forwards;
+        }
     }
 
     .footer__logo {

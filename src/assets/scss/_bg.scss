@@ -1,0 +1,11 @@
+#bg {
+    background: url(../img/bg_base_blend.png);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    mix-blend-mode: multiply;
+    opacity: .1;
+    filter: brightness(90%);
+    z-index: -1;
+}

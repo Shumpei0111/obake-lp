@@ -12,4 +12,5 @@ export { default as Asobo }      from './Asobo';
 export { default as MenuList }   from './MenuList';
 export { default as SnsBtn }     from './SnsBtn';
 export { default as Map }        from './Map';
-export { default as TicketLink } from './TicketLink'
+export { default as TicketLink } from './TicketLink';
+export { default as Bg }         from './Bg';
