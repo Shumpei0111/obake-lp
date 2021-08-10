@@ -7,7 +7,8 @@ const params = [
     ["zoom", "15"],
     ["size", "1200x300"],
     ["key", "AIzaSyBqt4XYJ8JZbzaV_7hjZmA57eKHo8BYq00"],
-    ["maptype", "satellite"],
+    // ["maptype", "satellite"],
+    ["maptype", "hybrid"],
 ];
 
 
