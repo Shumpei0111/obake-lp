@@ -2,7 +2,7 @@ import 'reset-css';
 import './App.scss';
 
 import { useEffect } from 'react';
-import { FirstView, Story, Mission, Ranking, Plan, Attention, Footer, TicketLink } from './components/index.js';
+import { Asobo, FirstView, Story, Mission, Ranking, Plan, Attention, Footer, TicketLink } from './components/index.js';
 
 import { gsap } from 'gsap';
 import { ScrollToPlugin } from 'gsap/all';
@@ -23,6 +23,7 @@ function App() {
 
   return (
     <div className="App">
+        <Asobo />
         <FirstView />
         <Story />
         <Mission />

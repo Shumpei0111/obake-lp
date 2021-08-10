@@ -8,6 +8,7 @@ export { default as Attention } from './Attention';
 export { default as Footer }    from './Footer';
 
 // parts
+export { default as Asobo }      from './Asobo';
 export { default as MenuList }   from './MenuList';
 export { default as SnsBtn }     from './SnsBtn';
 export { default as Map }        from './Map';
