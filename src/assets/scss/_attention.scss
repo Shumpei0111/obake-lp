@@ -3,12 +3,37 @@
 
     .attentions {
         display: flex;
-        justify-content: center;
+        flex-direction: column;
+        width: max-content;
+        margin: auto;
 
         &__item {
-            -ms-writing-mode: tb-rl;
-            writing-mode: vertical-rl;
-            padding: 0 24px;
+            padding: 24px 0 18px;
+            padding-left: 24px;
+            position: relative;
+
+            &:before {
+                content: "";
+                width: 24px;
+                background-image: url("../img/list_style.svg");
+                height: 32px;
+                display: inline-block;
+                background-repeat: no-repeat;
+                vertical-align: middle;
+                padding-right: 4px;
+                margin-top: -5px;
+            }
+
+            &:after {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                height: 18px;
+                background: url("../img/border_line.svg");
+                background-repeat: no-repeat;
+            }
         }
     }
 }
