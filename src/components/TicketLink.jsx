@@ -6,21 +6,12 @@ import '../assets/scss/_ticketlink.scss';
 const TicketLink = () => {
     const [ onDisp, setOnDisp ] = useState( false );
 
-    // useEffect(() => {
-
-    //     setTimeout( () => {
-    //         setOnDisp( true );
-    //     }, 300 );
-    // }, [])
-
     useEffect( () => {
         // Mutation Observer
         setTimeout( () => {
             const $ = document.getElementById( "firstView" );
 
             function intersectCallback(entry) {
-                console.log("en1", entry);
-                console.log("en2",entry[0].isIntersecting);
                 if(!entry[0].isIntersecting) {
                     setActiveClass();
                 
@@ -30,7 +21,6 @@ const TicketLink = () => {
             }
 
             function setActiveClass() {
-                console.log("onDisp",onDisp);
                 setOnDisp(true);
             }
 
@@ -47,7 +37,7 @@ const TicketLink = () => {
             const observer = new IntersectionObserver( intersectCallback, obsOptions );
 
             observer.observe( $ );
-        }, 200 )
+        }, 100 )
     } )
 
     return (
