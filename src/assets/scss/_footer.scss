@@ -38,4 +38,27 @@
         text-align: center;
         padding-top: 32px;
     }
+
+    //SP
+    @media screen and ( max-width: v.$spSize ) {
+        height: auto;
+        padding-bottom: 42px;
+
+        .to_top_btn {
+            width: 200px;
+            margin: -13rem auto;
+        }
+
+        .footer__logo {
+            width: 160px;
+            top: 6rem;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+
+        .credit {
+            word-break: keep-all;
+        }
+    }
 }

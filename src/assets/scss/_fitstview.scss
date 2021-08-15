@@ -72,6 +72,10 @@
             font-weight: bold;
         }
 
+        br {
+            display: none
+        }
+
         &.isLoaded {
             @extend .isLoaded;
         }
@@ -102,6 +106,39 @@
             right: 2rem;
             bottom: 1rem;
             font-size: 2.4rem;
+        }
+    }
+
+    @media screen and (max-width: v.$spSize) {
+        .top__siteTitle {
+            top: 10vh;
+        }
+
+        .top__catchCopy {
+            font-size: 1.2rem;
+
+            br {
+                display: block;
+            }
+        }
+
+        .top__intro {
+
+            &.intro_1,
+            &.intro_2,
+            &.intro_3 {
+                font-size: 1.4rem;
+            }
+
+            &.intro_1 {
+                bottom: 12rem;
+            }
+            &.intro_2 {
+                bottom: 9rem;
+            }
+            &.intro_3 {
+                bottom: 6rem;
+            }
         }
     }
 }

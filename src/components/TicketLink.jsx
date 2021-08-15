@@ -9,14 +9,20 @@ const TicketLink = () => {
     useEffect( () => {
         // Mutation Observer
         setTimeout( () => {
-            const $ = document.getElementById( "firstView" );
+            const $firstView = document.getElementById( "firstView" );
+            // const $footer    = document.getElementById( "footer" );
 
             function intersectCallback(entry) {
-                if(!entry[0].isIntersecting) {
-                    setActiveClass();
+
+                for( let i = 0, n = entry.length; i < n; i++ ) {
+                    if( !entry[i].isIntersecting ) {
+                        setActiveClass();
                 
-                } else {
-                    disableActiveClass();
+                    } else {
+                        disableActiveClass();
+                        break;
+                    }
+
                 }
             }
 
@@ -30,13 +36,14 @@ const TicketLink = () => {
 
             const obsOptions = {
                 root: null,
-                rootMargin: "-50% 0px",
+                rootMargin: "0px 0px",
                 threshold: 0
             };
             
             const observer = new IntersectionObserver( intersectCallback, obsOptions );
 
-            observer.observe( $ );
+            observer.observe( $firstView );
+            // observer.observe( $footer );
         }, 100 )
     } )
 

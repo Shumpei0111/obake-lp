@@ -21,7 +21,7 @@ const FirstView = props => {
                     <P5Wrapper sketch={sketch} />
                 </div>
             </h1>
-            <p className={`top__catchCopy ${loaded ? "isLoaded" : "" }` }>日本初！実際の廃校を舞台に<span>謎解き</span> × <span>お化け屋敷</span>の体験型アトラクション、この夏開催！</p>
+            <p className={`top__catchCopy ${loaded ? "isLoaded" : "" }` }>日本初！実際の廃校を舞台に<span>謎解き</span> × <span>お化け屋敷</span>の<br />体験型アトラクション、この夏開催！</p>
             <MenuList type="top" scrollPacks={props.scrollPacks} />
             <p className="top__intro intro_1">不可解な火事</p>
             <p className="top__intro intro_2">行方不明の7人</p>

@@ -1,3 +1,5 @@
+@use './variables' as v;
+
 #ticketLink {
 
     .ticket__disp {
@@ -17,5 +19,13 @@
 
     .onDisplay {
         opacity: 1;
+    }
+
+    // SP
+    @media screen and ( max-width: v.$spSize ) {
+        
+        .ticket__disp {
+            top: 40rem;
+        }
     }
 }
