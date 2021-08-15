@@ -15,6 +15,9 @@ html {
 body {
     font-size: 1.4rem;
     position: relative;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 h2 {
@@ -32,7 +35,8 @@ a {
 }
 
 .contents {
-    margin: 0 auto 168px;
+    margin: 0 auto 148px;
+    padding-top: 20px;
     max-width: 900px;
 }
 

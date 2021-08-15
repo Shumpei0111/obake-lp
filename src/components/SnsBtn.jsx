@@ -6,8 +6,7 @@ const SnsBtn = props => {
     return (
         <div className={className}>
             <ul>
-                <li>T</li>
-                <li>f</li>
+                <li>Twitter</li>
             </ul>
         </div>
     )

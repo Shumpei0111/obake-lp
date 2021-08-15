@@ -39,11 +39,12 @@
         top: 20vh;
         left: 0;
         right: 0;
+        bottom: 0;
         margin: auto;
         width: 170px;
 
         .top__logo {
-            width: 190px;
+            // width: 190px;
             transition: 2s;
             opacity: 0;
             filter: drop-shadow(-2px 5px 4px #1F0000);

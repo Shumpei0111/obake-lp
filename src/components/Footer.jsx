@@ -16,7 +16,7 @@ const Footer = props => {
             <img src={toTopImg} alt="TOPへ戻る" className="to_top_btn" onClick={toTop} />
             <div>
                 <img src={yokoLogo} alt="廃墟探索" className="footer__logo" />
-                <MenuList type="footer" />
+                <MenuList type="footer" scrollPacks={props.scrollPacks} />
             </div>
             <p className="credit">{stuff}</p>
             <address className="copyright">{copyright}</address>

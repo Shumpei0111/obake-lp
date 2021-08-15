@@ -14,3 +14,7 @@ export { default as SnsBtn }     from './SnsBtn';
 export { default as Map }        from './Map';
 export { default as TicketLink } from './TicketLink';
 export { default as Bg }         from './Bg';
+
+// lib
+export { default as P5Wrapper } from './P5Wrapper';
+export { default as sketch } from './sketches/sketch';
