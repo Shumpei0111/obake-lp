@@ -14,23 +14,69 @@ function App() {
     gsap.registerPlugin(ScrollToPlugin);
   }, [] );
 
+  const duration = 0.4;
+
   const clickToTop = () => {
     gsap.to( window, {
         scrollTo: 0,
-        duration: 0.3,
+        duration: duration,
     } )
   };
+
+  const clickToStory = () => {
+    gsap.to( window, {
+      scrollTo: document.getElementById( "story" ),
+      duration: duration,
+    } )
+  };
+
+  const clickToMission = () => {
+    gsap.to( window, {
+      scrollTo: document.getElementById( "mission" ),
+      duration: duration
+    } )
+  };
+
+  const clickToRanking = () => {
+    gsap.to( window, {
+      scrollTo: document.getElementById( "ranking" ),
+      duration: duration
+    } )
+  };
+
+  const clickToPlan = () => {
+    gsap.to( window, {
+      scrollTo: document.getElementById( "plan" ),
+      duration: duration
+    } )
+  };
+
+  const clickToAttention = () => {
+    gsap.to( window, {
+      scrollTo: document.getElementById( "attention" ),
+      duration: duration
+    } )
+  };
+
+  const scrollPacks = {
+    toTop:       clickToTop,
+    toStory:     clickToStory,
+    toMission:   clickToMission,
+    toRanking:   clickToRanking,
+    toPlan:      clickToPlan,
+    toAttention: clickToAttention
+  }
 
   return (
     <div className="App">
         <Asobo />
-        <FirstView />
+        <FirstView scrollPacks={scrollPacks} />
         <Story />
         <Mission />
         <Ranking />
         <Plan />
         <Attention />
-        <Footer fn={clickToTop} />
+        <Footer fn={clickToTop} scrollPacks={scrollPacks} />
         <TicketLink />
         <Bg />
     </div>

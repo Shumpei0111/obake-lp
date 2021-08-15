@@ -5,4 +5,11 @@
     }
 }
 
-.footer__snsbtn {}
+.footer__snsbtn {
+
+    ul {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 24px;
+    }
+}
