@@ -20,6 +20,7 @@
         right: 50%;
         margin: 0;
         width: 170px;
+        letter-spacing: 24px;
     }
 
     .asobo__img {
@@ -33,5 +34,20 @@
         opacity: 0;
         visibility: hidden;
     
+    }
+
+    // SP
+    @media screen and (max-width: v.$spSize) {
+        .asobo__str {
+            -ms-writing-mode: tb-rl;
+            writing-mode: vertical-rl;
+            text-align: center;
+            margin: auto;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: max-content;
+        } 
     }
 }

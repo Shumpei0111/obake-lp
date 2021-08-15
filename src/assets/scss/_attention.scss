@@ -1,3 +1,5 @@
+@use './variables.scss' as v;
+
 #attention {
     margin-bottom: 24rem;
 
@@ -33,6 +35,21 @@
                 height: 18px;
                 background: url("../img/border_line.svg");
                 background-repeat: no-repeat;
+            }
+        }
+    }
+
+    // SP
+    @media screen and (max-width: v.$spSize) {
+        .attentions {
+            width: auto;
+
+            &__item {
+                padding: 0 0 40px 0;
+
+                &:after {
+                    height: 36px;
+                }
             }
         }
     }

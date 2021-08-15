@@ -1,3 +1,6 @@
+@use './variables.scss' as v;
+
+
 .top__snsbtn {
     
     ul {
@@ -11,5 +14,9 @@
         display: flex;
         justify-content: flex-end;
         margin-top: 24px;
+    }
+
+    @media screen and (max-width: v.$spSize) {
+        display: none;
     }
 }

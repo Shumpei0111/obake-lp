@@ -5,6 +5,13 @@
     top: 14rem;
     left: 4rem;
     z-index: 3;
+
+    // SP
+    @media screen and ( max-width: v.$spSize ) {
+        left: 2rem;
+        top: 1rem;
+        width: 70%;
+    }
 }
 
 .top__menulist {
@@ -20,6 +27,16 @@
         color: v.$hoverRed;
         -webkit-animation: hover 0.1s ease forwards;
         animation: hover 0.1s ease forwards;
+    }
+
+    // SP
+    @media screen and ( max-width: v.$spSize ) {
+
+        &__item {
+            font-size: 1.4rem;
+            display: inline-block;
+            padding-right: 16px;
+        }
     }
 }
 
@@ -48,5 +65,10 @@
 
     &__item:last-of-type {
         padding-right: 0;
+    }
+
+    // SP
+    @media screen and ( max-width: v.$spSize ) {
+        display: none;
     }
 }

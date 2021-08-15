@@ -25,7 +25,7 @@ const Asobo = () => {
 
     return(
         <div id="asobo" className={`${isLoaded? "asobo__isLoaded" : ""}`}>
-            <p className="asobo__str">たすけて...</p>
+            <p className="asobo__str">たすけて</p>
             <img className="asobo__img" src={AsoboImg} alt="introduction this service catch copy" />
         </div>
     )

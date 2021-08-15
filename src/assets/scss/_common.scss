@@ -1,3 +1,5 @@
+@use './variables.scss' as v;
+
 html {
     font-size: 62.5%;
     height: 100%;
@@ -39,6 +41,16 @@ a {
     padding-top: 20px;
     max-width: 900px;
 }
+
+
+@media screen and (max-width: v.$spSize) {
+    .contents {
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+}
+
+/***** Animation Proparties ******/
 
 @-webkit-keyframes hover {
     0% {opacity: 1;}
