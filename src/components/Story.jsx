@@ -7,7 +7,7 @@ const Story = () => {
             <div className="story__wrapper">
                 <div className="story__strong">
                     <p>青森県野辺地町。</p>
-                    <p><span>星駆</span>という小さな村に<span>奇妙な事件</span>が起こった</p>
+                    <p><span className="story__top_strong">星駆</span>という小さな村に<span className="story__top_strong">奇妙な事件</span>が起こった</p>
                 </div>
                 <div>
                     <p>2021年3月に廃校になったばかりの中学校</p>

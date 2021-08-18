@@ -11,7 +11,6 @@ const MenuList = props => {
             <ul className={className}>
                 {
                     menus.map( item => {
-                        console.log("item", item)
                         const toLink = (
                             () => {
                                 if( item === 'ストーリー' ) return props.scrollPacks.toStory;
