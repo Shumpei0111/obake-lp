@@ -5,12 +5,14 @@
     
     ul {
         display: flex;
-        transition: .2s;
+        transition: .21s;
+        visibility: hidden;
         opacity: 0;
     }
 
     .onDisplay {
         transition: .2s;
+        visibility: visible;
         opacity: 1;
     }
 }

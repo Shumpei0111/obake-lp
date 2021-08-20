@@ -16,21 +16,23 @@
 
 .top__menulist {
     transition: .2s;
+    visibility: hidden;
     opacity: 0;
 
     &.onDisplay {
         transition: .2s;
+        visibility: visible;
         opacity: 1;
     }
 
     &__item {
         padding-bottom: 24px;
-        cursor: pointer;
         font-size: 1.6rem;
         text-shadow: v.$textShadow;
     }
 
     &__item:hover {
+        cursor: pointer;
         color: v.$hoverRed;
         -webkit-animation: hover 0.1s ease forwards;
         animation: hover 0.1s ease forwards;
