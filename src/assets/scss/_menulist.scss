@@ -15,6 +15,13 @@
 }
 
 .top__menulist {
+    transition: .2s;
+    opacity: 0;
+
+    &.onDisplay {
+        transition: .2s;
+        opacity: 1;
+    }
 
     &__item {
         padding-bottom: 24px;
