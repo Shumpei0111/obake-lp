@@ -24,5 +24,23 @@
                 }
             }
         }
+
+        // SP
+        @media screen and (max-width: v.$spSize) {
+            .story__wrapper {
+
+                .story__top_strong:nth-child(2) {
+                    display: inline-block;
+                }
+
+                .story__strong {
+                    font-size: 2rem;
+
+                    p:last-of-type:after {
+                        content: " ―――";
+                    }
+                }
+            }
+        }
     }
 }

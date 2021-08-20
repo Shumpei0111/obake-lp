@@ -4,14 +4,23 @@ import '../assets//scss/_menulist.scss';
 
 const MenuList = props => {
     const wrapperClass = props.type === 'top' ? 'top__menuwrapper' : 'footer__menuwrapper';
-    const className = props.type === 'top' ? 'top__menulist' : 'footer__menulist';
+    const className    = props.type === 'top' ? 'top__menulist' : 'footer__menulist';
+
+    const inViewClass  = (
+        () => {
+            if( props.type === 'top' && props.inView ) {
+                return '';
+            } else {
+                return 'onDisplay'
+            }
+        }
+    )();
 
     return (
         <div className={wrapperClass}>
-            <ul className={className}>
+            <ul className={`${className} ${inViewClass}`}>
                 {
                     menus.map( item => {
-                        console.log("item", item)
                         const toLink = (
                             () => {
                                 if( item === 'ストーリー' ) return props.scrollPacks.toStory;
@@ -31,7 +40,7 @@ const MenuList = props => {
                     } )
                 }
             </ul>
-            <SnsBtn type={props.type} />
+            <SnsBtn type={props.type} inView={inViewClass} />
         </div>
     )
 }

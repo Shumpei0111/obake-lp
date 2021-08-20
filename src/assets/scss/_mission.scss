@@ -79,5 +79,31 @@
                 }
             }
         }
+
+        // SP
+        @media screen and (max-width: v.$spSize) {
+            .mission__bg {
+                height: 740px;
+            }
+
+            .mission__wrapper {
+
+                .mission__txt_filed {
+                    max-width: 350px;
+
+                    .mission__content {
+
+                        &.mission__intro {
+                            top: -74rem;
+                            padding-bottom: 0;
+                        }
+
+                        &.content__body {
+                            top: -45rem;
+                        }
+                    }
+                }
+            }
+        }
     }
 }

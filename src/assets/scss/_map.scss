@@ -1,3 +1,5 @@
+@use './variables' as v;
+
 #map {
     margin: 2.4rem auto;
     width: 100%;
@@ -46,6 +48,20 @@
 
             .address {
                 font-size: 1.2rem;
+            }
+        }
+    }
+
+    @media screen and ( max-width: v.$spSize ) {
+        .map__img {
+            width: 100%;
+        }
+
+        .location__wrapper {
+            flex-direction: column;
+
+            .location__item {
+                margin: 2rem 1rem;
             }
         }
     }

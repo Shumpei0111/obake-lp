@@ -5,8 +5,12 @@ const SnsBtn = props => {
 
     return (
         <div className={className}>
-            <ul>
-                <li>Twitter</li>
+            <ul className={`${props.inView}`}>
+                <li className='sns__item'>
+                    <a href='https://twitter.com/seventhseven' rel='noopener noreferrer' target='_blank'>
+                        Twitter
+                    </a>
+                </li>
             </ul>
         </div>
     )
