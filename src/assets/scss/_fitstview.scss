@@ -34,7 +34,7 @@
     }
     
     .top__siteTitle {
-        // animation: siteTitle 2s infinite;
+        animation: siteTitle 2s infinite;
         position: absolute;
         top: 20vh;
         left: 0;
@@ -48,6 +48,7 @@
             transition: 2s;
             opacity: 0;
             filter: drop-shadow(-2px 5px 4px #1F0000);
+            
 
             &.isLoaded {
                 @extend .isLoaded;
@@ -138,6 +139,10 @@
             }
             &.intro_3 {
                 bottom: 6rem;
+            }
+
+            &.intro_4 {
+                font-size: 2rem;
             }
         }
     }

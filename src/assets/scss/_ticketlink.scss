@@ -6,7 +6,7 @@
         width: 240px;
         position: fixed;
         right: -6rem;
-        top: 60rem;
+        bottom: 15rem;
         filter: drop-shadow(0px 2px 3px rgb(0 0 0 / 30%));
         opacity: 0;
         visibility: hidden;
@@ -28,7 +28,8 @@
     @media screen and ( max-width: v.$spSize ) {
         
         .ticket__disp {
-            top: 40rem;
+            bottom: -1rem;
+            width: 210px;
         }
     }
 }

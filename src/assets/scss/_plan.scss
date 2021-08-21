@@ -30,11 +30,8 @@
                         -webkit-animation: hover 0.1s ease forwards;
                         animation: hover 0.1s ease forwards;
                     }
-                }
 
-                .slick-current {
-
-                    .plan_box__item {
+                    &.isChoosed {
                         background: v.$red;
                         border-color: v.$white;
                     }

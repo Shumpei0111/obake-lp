@@ -2,6 +2,7 @@
 import Title from '../../assets/img/logo_tate@2x.png';
 let isLoaded = false;
 
+/* eslint-disable */
 const sketch = p => {
     p.setup = () => {
         p.createCanvas(170,500);
@@ -38,7 +39,7 @@ const sketch = p => {
             for (let i = 0; i < 1; i++) {
                 let o = {
                     pixels: null,
-                    t1: p.floor(p.random(0, 1000)),
+                    t1: p.floor(p.random(0, 10)),
                     speed: p.floor(p.random(4, 24)),
                     randX: p.floor(p.random(24, 80))
                 };
@@ -79,9 +80,9 @@ const sketch = p => {
                     b = index + 2;
                     a = index + 3;
                     destImg.pixels[r] = srcPixels[r];
-                    destImg.pixels[g] = srcPixels[g];
-                    destImg.pixels[b] = srcPixels[b];
-                    destImg.pixels[a] = srcPixels[a];
+                    // destImg.pixels[g] = srcPixels[g];
+                    // destImg.pixels[b] = srcPixels[b];
+                    // destImg.pixels[a] = srcPixels[a];
                 }
             }
             destImg.updatePixels();
@@ -106,9 +107,9 @@ const sketch = p => {
                         g = index + 1;
                         b = index + 2;
                         a = index + 3;
-                        destPixels[r] = srcImg.pixels[r] + obj.randX;
-                        destPixels[g] = srcImg.pixels[g] + obj.randX;
-                        destPixels[b] = srcImg.pixels[b] + obj.randX;
+                        // destPixels[r] = srcImg.pixels[r] + obj.randX;
+                        // destPixels[g] = srcImg.pixels[g] + obj.randX;
+                        // destPixels[b] = srcImg.pixels[b] + obj.randX;
                         destPixels[a] = srcImg.pixels[a];
                     }
                 }
@@ -145,10 +146,10 @@ const sketch = p => {
                             g2 = g + offsetX;
                             b2 = b + offsetX;
                             a2 = a + offsetX;
-                            destPixels[r] = srcImg.pixels[r2];
-                            destPixels[g] = srcImg.pixels[g2];
-                            destPixels[b] = srcImg.pixels[b2];
-                            destPixels[a] = srcImg.pixels[a2];
+                            // destPixels[r] = srcImg.pixels[r2];
+                            // destPixels[g] = srcImg.pixels[g2];
+                            // destPixels[b] = srcImg.pixels[b2];
+                            // destPixels[a] = srcImg.pixels[a2];
                     }
                 }
             }
@@ -163,10 +164,10 @@ const sketch = p => {
     
             range = 16;
             destPixels = new Uint8ClampedArray(srcImg.pixels);
-            randR = (p.floor(p.random(-range, range)) * srcImg.width + p.floor(p.random(-range, range))) * this.channelLen;
-            randG = (p.floor(p.random(-range, range)) * srcImg.width + p.floor(p.random(-range, range))) * this.channelLen;
-            randB = (p.floor(p.random(-range, range)) * srcImg.width + p.floor(p.random(-range, range))) * this.channelLen;
-    
+            // randR = (p.floor(p.random(-range, range)) * srcImg.width + p.floor(p.random(-range, range))) * this.channelLen;
+            // randG = (p.floor(p.random(-range, range)) * srcImg.width + p.floor(p.random(-range, range))) * this.channelLen;
+            // randB = (p.floor(p.random(-range, range)) * srcImg.width + p.floor(p.random(-range, range))) * this.channelLen;
+
             for (let y = 0; y < srcImg.height; y++) {
                 for (let x = 0; x < srcImg.width; x++) {
                     let r, g, b, a;
@@ -181,10 +182,10 @@ const sketch = p => {
                     r2 = (r + randR) % srcImg.pixels.length;
                     g2 = (g + randG) % srcImg.pixels.length;
                     b2 = (b + randB) % srcImg.pixels.length;
-                    destPixels[r] = srcImg.pixels[r2];
-                    destPixels[g] = srcImg.pixels[g2];
-                    destPixels[b] = srcImg.pixels[b2];
-                    destPixels[a] = srcImg.pixels[a];
+                    // destPixels[r] = srcImg.pixels[r2];
+                    // destPixels[g] = srcImg.pixels[g2];
+                    // destPixels[b] = srcImg.pixels[b2];
+                    // destPixels[a] = srcImg.pixels[a];
                 }
             }
     
@@ -197,10 +198,10 @@ const sketch = p => {
             let rectW;
             let rectH;
             let destImg;
-            startX = p.floor(p.random(0, srcImg.width - 30));
-            startY = p.floor(p.random(0, srcImg.height - 50));
-            rectW = p.floor(p.random(30, srcImg.width - startX));
-            rectH = p.floor(p.random(1, 50));
+            // startX = p.floor(p.random(0, srcImg.width - 30));
+            // startY = p.floor(p.random(0, srcImg.height - 50));
+            // rectW = p.floor(p.random(30, srcImg.width - startX));
+            // rectH = p.floor(p.random(1, 1000));
             destImg = srcImg.get(startX, startY, rectW, rectH);
             destImg.loadPixels();
             return destImg;
@@ -264,8 +265,8 @@ const sketch = p => {
                 p.push();
                 p.translate((p.width - this.imgOrigin.width) / 2, (p.height - this.imgOrigin.height) / 2);
                 if (p.floor(p.random(100)) > 80) {
-                    obj.x = p.floor(p.random(-this.imgOrigin.width * 0.3, this.imgOrigin.width * 0.7));
-                    obj.y = p.floor(p.random(-this.imgOrigin.height * 0.1, this.imgOrigin.height));
+                    obj.x = p.floor(p.random(-this.imgOrigin.width * 0.3, this.imgOrigin.width * 6));
+                    // obj.y = p.floor(p.random(-this.imgOrigin.height * 0.1, this.imgOrigin.height));
                     obj.img = this.getRandomRectImg(this.imgOrigin);
                 }
                 if (obj.img) {
@@ -279,4 +280,5 @@ const sketch = p => {
     }
 };
 
+/* eslint-enable */
 export default sketch;
