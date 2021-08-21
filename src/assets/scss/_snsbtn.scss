@@ -15,6 +15,14 @@
         visibility: visible;
         opacity: 1;
     }
+
+    @media screen and (max-width: v.$spSize) {
+        ul,
+        .onDisplay {
+            transition: 0s;
+            justify-content: center;
+        }
+    }
 }
 
 .footer__snsbtn {
@@ -22,7 +30,6 @@
     ul {
         display: flex;
         justify-content: flex-end;
-        margin-top: 24px;
     }
 
     @media screen and (max-width: v.$spSize) {
@@ -49,5 +56,14 @@
 
         -webkit-animation: hover 0.1s ease forwards;
         animation: hover 0.1s ease forwards;
+    }
+
+    @media screen and (max-width: v.$spSize) {
+        font-size: 1rem;
+        padding-bottom: 0;
+
+        a {
+            color: v.$red;
+        }
     }
 }

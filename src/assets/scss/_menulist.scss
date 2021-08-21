@@ -6,52 +6,82 @@
     left: 4rem;
     z-index: 3;
 
+    i {
+        display: none;
+    }
+
     // SP
     @media screen and ( max-width: v.$spSize ) {
-        left: 2rem;
-        top: 1rem;
-        width: 70%;
-    }
-}
+        &.onDisplay {
+            left: 0;
+            top: 0;
+            width: 100%;
+            display: flex;
+            background: v.$black;
+            padding: 8px 0;
+            color: v.$red;
 
-.top__menulist {
-    transition: .2s;
-    visibility: hidden;
-    opacity: 0;
+
+            i {
+                display: block;
+                font-size: 2rem;
+                text-align: center;
+                padding-bottom: 4px;
+            }
+        }
+    }
+
+    .top__menulist {
+        transition: .2s;
+        visibility: hidden;
+        opacity: 0;
+    
+        &__item {
+            padding-bottom: 24px;
+            font-size: 1.6rem;
+            text-shadow: v.$textShadow;
+        }
+    
+        &__item:hover {
+            cursor: pointer;
+            color: v.$hoverRed;
+            -webkit-animation: hover 0.1s ease forwards;
+            animation: hover 0.1s ease forwards;
+        }
+    
+        // SP
+        @media screen and ( max-width: v.$spSize ) {
+            width: 100%;
+    
+            &__item {
+                font-size: 1rem;
+                display: inline-block;
+                padding: 4px 0;
+                vertical-align: middle;
+                text-align: center;
+                width: calc(100% / 6);
+            }
+        }
+    }
 
     &.onDisplay {
-        transition: .2s;
-        visibility: visible;
-        opacity: 1;
-    }
 
-    &__item {
-        padding-bottom: 24px;
-        font-size: 1.6rem;
-        text-shadow: v.$textShadow;
-    }
-
-    &__item:hover {
-        cursor: pointer;
-        color: v.$hoverRed;
-        -webkit-animation: hover 0.1s ease forwards;
-        animation: hover 0.1s ease forwards;
-    }
-
-    // SP
-    @media screen and ( max-width: v.$spSize ) {
-
-        &__item {
-            font-size: 1.4rem;
-            display: inline-block;
-            padding-right: 16px;
+        .top__menulist {
+            transition: .2s;
+            visibility: visible;
+            opacity: 1;
         }
     }
 }
 
 
+
 .footer__menuwrapper {
     padding-top: 100px;
+
+    i {
+        display: none;
+    }
 }
 
 .footer__menulist {
