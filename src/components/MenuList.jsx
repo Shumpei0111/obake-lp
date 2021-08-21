@@ -45,11 +45,11 @@ const MenuList = props => {
 
                         const icon = (
                             () => {
-                                if( item === 'ストーリー' ) return <i class="fas fa-book-open"></i>
-                                if( item === 'ミッション' ) return <i class="fas fa-clipboard-check"></i>;
-                                if( item === 'ランキング' ) return <i class="fas fa-trophy"></i>;
-                                if( item === '開催日時' ) return <i class="far fa-calendar-alt"></i>;
-                                if( item === '注意事項' ) return <i class="fas fa-exclamation-triangle"></i>;
+                                if( item === 'ストーリー' ) return <i className="fas fa-book-open"></i>
+                                if( item === 'ミッション' ) return <i className="fas fa-clipboard-check"></i>;
+                                if( item === 'ランキング' ) return <i className="fas fa-trophy"></i>;
+                                if( item === '開催日時' ) return <i className="far fa-calendar-alt"></i>;
+                                if( item === '注意事項' ) return <i className="fas fa-exclamation-triangle"></i>;
                             }
                         )();
 
