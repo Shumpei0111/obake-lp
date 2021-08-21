@@ -4,7 +4,7 @@ const SnsBtn = props => {
     const className = props.type === 'top' ? 'top__snsbtn' : 'footer__snsbtn';
 
     const icon = (
-        () => <i class="fab fa-twitter"></i>
+        () => <i className="fab fa-twitter"></i>
     )();
 
     return (

@@ -14,12 +14,12 @@
     @media screen and ( max-width: v.$spSize ) {
         &.onDisplay {
             left: 0;
-            top: calc(100% - 58px);
-            height: 58px;
+            top: calc(100% - 68px);
+            height: 68px;
             width: 100%;
             display: flex;
             background: v.$black;
-            padding: 8px 0;
+            padding: 12px 0;
             color: v.$red;
 
 
