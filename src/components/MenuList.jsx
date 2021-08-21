@@ -17,8 +17,8 @@ const MenuList = props => {
     )();
 
     return (
-        <div className={wrapperClass}>
-            <ul className={`${className} ${inViewClass}`}>
+        <div className={`${wrapperClass} ${inViewClass}`}>
+            <ul className={className}>
                 {
                     menus.map( item => {
                         const toLink = (
@@ -32,15 +32,41 @@ const MenuList = props => {
                             }
                         )();
 
+                        const itemGenre = (
+                            () => {
+                                if( item === 'ストーリー' ) return 'story';
+                                if( item === 'ミッション' ) return 'mission';
+                                if( item === 'ランキング' ) return 'ranking';
+                                if( item === '開催日時' ) return 'plan';
+                                if( item === '注意事項' ) return 'attention';
+                                return '';
+                            }
+                        )();
+
+                        const icon = (
+                            () => {
+                                if( item === 'ストーリー' ) return <i class="fas fa-book-open"></i>
+                                if( item === 'ミッション' ) return <i class="fas fa-clipboard-check"></i>;
+                                if( item === 'ランキング' ) return <i class="fas fa-trophy"></i>;
+                                if( item === '開催日時' ) return <i class="far fa-calendar-alt"></i>;
+                                if( item === '注意事項' ) return <i class="fas fa-exclamation-triangle"></i>;
+                            }
+                        )();
+
                         return ( 
-                            <li className={className + '__item'} key={item} onClick={toLink}>
-                                <span>{item}</span>
+                            <li className={`${className + '__item'} ${'to_' + itemGenre}`} key={item} onClick={toLink}>
+                                {icon}
+                                <span>
+                                    {item}
+                                </span>
                             </li>
                         )
                     } )
                 }
+                <li className={className + '__item'}>
+                    <SnsBtn type={props.type} inView={inViewClass} />
+                </li>
             </ul>
-            <SnsBtn type={props.type} inView={inViewClass} />
         </div>
     )
 }
