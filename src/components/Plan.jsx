@@ -20,6 +20,7 @@ const Plan = () => {
 
     const days = [
         {
+            id: "1",
             day: "7月1日",
             week: "木",
             plan: {
@@ -38,6 +39,7 @@ const Plan = () => {
             }
         },
         {
+            id: "2",
             day: "7月2日",
             week: "金",
             plan: {
@@ -56,6 +58,7 @@ const Plan = () => {
             }
         },
         {
+            id: "3",
             day: "7月3日",
             week: "土",
             plan: {
@@ -74,6 +77,7 @@ const Plan = () => {
             }
         },
         {
+            id: "4",
             day: "7月4日",
             week: "日",
             plan: {
@@ -92,6 +96,7 @@ const Plan = () => {
             }
         },
         {
+            id: "5",
             day: "7月5日",
             week: "月",
             plan: {
@@ -110,6 +115,7 @@ const Plan = () => {
             }
         },
         {
+            id: "6",
             day: "7月6日",
             week: "火",
             plan: {
@@ -128,6 +134,7 @@ const Plan = () => {
             }
         },
         {
+            id: "7",
             day: "7月7日",
             week: "水",
             plan: {
@@ -146,6 +153,8 @@ const Plan = () => {
             }
         },
     ];
+
+
 
     const settings = {
         focusOnSelect: true,
@@ -193,49 +202,49 @@ const Plan = () => {
     const [onlyPriceCh, setonlyPriceCh] = useState(initOnlyCh);
 
     const [changed, setChanged] = useState(false);
+    const [isChoosed, setIsChoosed] = useState(days[0]);
 
-
-    const changeDate = date => {
-        if(!date) return;
-
-        // 宿泊コース
-        const tour = {...date.tour};
-        let tourAd = "?a阿鬼90wefsdf";
-        let tourCh = "+ldk廻dlでsぁそそそ";
-        setChanged(true);
-        settourPriceAd(tourAd);
-        settourPriceCh(tourCh);
-
-        // 探索コース
-        const only = {...date.only};
-        let onlyAd = "klkdjdeiiill99999";
-        let onlyCh = "そんsけいf顔貌klJJ";
-        setonlyPriceAd(onlyAd);
-        setonlyPriceCh(onlyCh);
-
-
-        setTimeout( () => {
-            setChanged(false);
-
-            // 宿泊コース
-            tourAd = comma(tour.price.ad);
-            tourCh = comma(tour.price.ch);
-            settourPriceAd(tourAd);
-            settourPriceCh(tourCh);
-
-            // 探索コース
-            let onlyAd = comma(only.price.ad);
-            let onlyCh = comma(only.price.ch);
-            setonlyPriceAd(onlyAd);
-            setonlyPriceCh(onlyCh);
-        }, 150 )
-    }
 
     useEffect(() => {
-        changeDate();
-    });
-
-    const todayDate = "7月1日";
+        const changeDate = data => {
+            if(!data) return;
+            const date = data.plan;
+    
+            // 宿泊コース
+            const tour = {...date.tour};
+            let tourAd = "?a阿鬼90wefsdf";
+            let tourCh = "+ldk廻dlでsぁそそそ";
+            setChanged(true);
+            settourPriceAd(tourAd);
+            settourPriceCh(tourCh);
+    
+            // 探索コース
+            const only = {...date.only};
+            let onlyAd = "klkdjdeiiill99999";
+            let onlyCh = "そんsけいf顔貌klJJ";
+            setonlyPriceAd(onlyAd);
+            setonlyPriceCh(onlyCh);
+    
+    
+            setTimeout( () => {
+                setChanged(false);
+                setIsChoosed( isChoosed );
+    
+                // 宿泊コース
+                tourAd = comma(tour.price.ad);
+                tourCh = comma(tour.price.ch);
+                settourPriceAd(tourAd);
+                settourPriceCh(tourCh);
+    
+                // 探索コース
+                let onlyAd = comma(only.price.ad);
+                let onlyCh = comma(only.price.ch);
+                setonlyPriceAd(onlyAd);
+                setonlyPriceCh(onlyCh);
+            }, 150 )
+        }
+        changeDate( isChoosed );
+    }, [isChoosed])
 
     return (
         <div id="plan" className="contents">
@@ -244,10 +253,9 @@ const Plan = () => {
                 <div className="plan__container">
                     <Slider {...settings} className="plan__plan_box">
                         {days.map( (d,ind) => {
-                            const today = d.day === todayDate ? true : false;
                             return (
-                                <div onClick={()=>changeDate(d.plan)} key={d.day}>
-                                    <div  className={`plan_box__item ${today ? "isToday" : ""}`}>
+                                <div onClick={()=>setIsChoosed(d)} key={d.day}>
+                                    <div  className={`plan_box__item ${isChoosed.id === d.id ? "isChoosed" : ""}`}>
                                         <span className="plan_box__item_day">{d.day}</span><span className="plan_box__item_week">({d.week})</span></div>
                                     </div>
                             )})
