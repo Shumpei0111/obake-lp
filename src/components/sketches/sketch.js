@@ -9,7 +9,7 @@ const sketch = p => {
         p.loadImage( Title, img => {
             p.glitch = new Glitch( img );
             isLoaded = true;
-        } );
+        } );     
     };
 
     p.draw = () => {
