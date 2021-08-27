@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import AsoboImg from '../assets/img/asobo.svg';
 
 import '../assets/scss/_asobo.scss';
 
@@ -26,7 +25,9 @@ const Asobo = () => {
     return(
         <div id="asobo" className={`${isLoaded? "asobo__isLoaded" : ""}`}>
             <p className="asobo__str">たすけて</p>
-            <img className="asobo__img" src={AsoboImg} alt="introduction this service catch copy" />
+            <span className="asobo__img ah">あ</span>
+            <span className="asobo__img so">そ</span>
+            <span className="asobo__img bo">ぼ</span>
         </div>
     )
 }
