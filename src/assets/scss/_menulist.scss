@@ -18,10 +18,10 @@
             height: 68px;
             width: 100%;
             display: flex;
-            background: v.$black;
-            padding: 12px 0;
-            color: v.$red;
-
+            background: v.$red;
+            padding: 4px 0 12px;
+            color: v.$black;
+            overflow: hidden;
 
             i {
                 display: block;

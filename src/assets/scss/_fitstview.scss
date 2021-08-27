@@ -10,11 +10,13 @@
     }
 
     .top__bg {
-        background: url(../img/lorenz-huter-5jxFc5QlcAc-unsplash.jpg) no-repeat center left fixed;
+        background-position: right;
+        background: url(../img/lorenz-huter-5jxFc5QlcAc-unsplash.jpg) fixed;
+        background-position: center left;
+        background-repeat: no-repeat;
         filter: brightness(40%);
         -webkit-filter: brightness(40%);
         height: 100vh;
-        background-position: right;
     }
 
     .top__bg:after {
@@ -108,12 +110,21 @@
             right: 2rem;
             bottom: 1rem;
             font-size: 2.4rem;
+            word-break: keep-all;
         }
     }
 
     @media screen and (max-width: v.$spSize) {
         .top__siteTitle {
             top: 10vh;
+        }
+
+        .top__bg__wrapper {
+            height: 100vh;
+
+            .top__bg {
+                background-position: -900px;
+            }
         }
 
         .top__catchCopy {
