@@ -1,70 +1,125 @@
-# Getting Started with Create React App
+# はじめに
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+「実際の廃校を使ったお化け屋敷のサイト」という設定でLPを制作しました。
 
-## Available Scripts
+細かな動きや、デザインなどはなるべく怖くなるように演出することを意識しました。
 
-In the project directory, you can run:
+お題からアイデアを膨らませ、ロケーションが青森県のある村だったため、
 
-### `npm start`
+単にお化け屋敷の集客だけでなく、村おこしの一環として、宿泊プランも提案する形を取りました。
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+SNSとの連携も検討し、Twitter上でクリアタイムをランキングで毎日発表するなどの施策しました。
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `npm test`
+## 設定、ターゲット
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- [業界]
+  - エンタメ、レジャー
+- [イメージキーワード]
+  - 恐怖／ホラー／夜／廃校／行方不明／夏／火事
+- [ポリシー・コンセプト]
+  - この夏一番怖い廃校。謎を解いて７人の行方を探る謎解きホラーイベント。
+- [予想されるターゲット]
+  - 24歳〜35歳の車で移動することができる個人、グループまたは夫婦
+  - 社会人になって免許もあるし、夏の思い出づくりに旅行目的
+  - 場所が行きにくいので学生より社会人
+  - 地域活性化を目的としているので可処分所得がある層
+  - 廃墟好き。お化け屋敷ファン。
+  - オバケンなど今時のイベントにも参加済みで、ある程度予想がついている。
+  - 好奇心旺盛。
+  - 子持ちではない。もしくは実家が青森にあり、預けられる世帯。
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## ベンチマーク
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- 株式会社闇
+- 銚子電鉄
+- リアル脱出ゲーム
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 競合
 
-### `npm run eject`
+- テーマパーク、遊園地
+- キャンプ地
+- 謎解きミステリーツアー
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## デザインコンセプト
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+廃校 X 謎解き
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+**廃校探索型お化け屋敷**
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```
+謎解きも普通に難しいけど、単純に怖い
 
-## Learn More
+怖かった体験はツイートでもバズりやすい（ある意味ネガティヴな要素なので）
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+わざわざ青森に来る理由が必要。単純にお化け屋敷やってますだと「ふーん」
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+近年人気の謎解き、脱出ゲームとお化け屋敷を掛け合わせる
 
-### Code Splitting
+さらにSNSを使って広告を打つ
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
+## デザイン面
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+**実際の廃校であることを伝えるため**
 
-### Making a Progressive Web App
+実際の廃校を舞台に謎解き X お化け屋敷を体験！
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+のキャッチコピーをTOPに入れる
 
-### Advanced Configuration
+**宿泊つきのツアーであることを伝えるために**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+旅行の行程をページに記載
 
-### Deployment
+ホテルの場所を記載
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+**謎解き体験であることを伝えるために**
 
-### `npm run build` fails to minify
+このお化け屋敷のクリアミッションを伝える
+- クリア条件：7人の痕跡をあつめて火事の原因をつきとめろ
+- 所要時間　：２時間程度
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+## コンテンツ面
+
+**廃校のお化け屋敷であることを伝えるため**
+
+中学校でおきたストーリーを掲載する
+
+**ランキングが発表されSNSで共有が可能であることを伝えるため**
+
+公式ツイッターから **#廃校謎解きランキング** のタグで毎晩ゲーム終了後にツイートが発表され、
+
+LPにもランキングが表示される
+
+参加者がツイッターアカウントを持っている場合は、
+
+アカウント名も表示され、プロフに遷移することが可能。
+
+**お化け屋敷という性質上、注意書きを加える**
+
+注意事項
+- 中学生以上が対象（１名につき保護者が１名必要）
+- １回定員４名
+- 心臓疾患や他の疾患、妊娠中のお客様はお控えください
+- 階段の登り降りが困難な方もご参加いただけません。
+- 酒気帯びの方はご参加いただけません。
+- 熱その他風邪等の諸症状がある方はご参加いただけません。
+
+**普段の祇園祭が夜も行うことについて**
+
+普段もやっている & 夜は特別（普通にライトアップでもいいかも）
+
+## トンマナ
+- [キーワード]
+  - 退廃／カジュアル／レジャー／ジャパニーズホラー
+- [カラー]
+  - 黒／灰／青緑
+
+顧客が抱える問題
+
+- 観光資源を使った地域活性化
+  - インバウンドが見込めなくなった現在、少しでも呼び込めるチャンスを作りたい。
