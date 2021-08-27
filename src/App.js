@@ -1,11 +1,22 @@
 import 'reset-css';
 import './App.scss';
-
+import React, { lazy, Suspense } from 'react';
 import { useEffect } from 'react';
-import { Asobo, FirstView, Story, Mission, Ranking, Plan, Attention, Footer, Bg } from './components/index.js';
+import { Asobo, FirstView, Bg } from './components/index.js';
 
 import { gsap } from 'gsap';
 import { ScrollToPlugin } from 'gsap/all';
+
+// Lazy
+const renderLoader = () => <p>読み込み中...</p>
+
+const LazyStory     = lazy(() => import('./components/Story'));
+const LazyFooter    = lazy(() => import('./components/Footer'));
+const LazyMission   = lazy(() => import('./components/Mission'));
+const LazyRanking   = lazy(() => import('./components/Ranking'));
+const LazyPlan      = lazy(() => import('./components/Plan'));
+const LazyAttention = lazy(() => import('./components/Attention'));
+// Lazy
 
 
 function App() {
@@ -70,12 +81,16 @@ function App() {
     <div className="App">
         <Asobo />
         <FirstView scrollPacks={scrollPacks} />
-        <Story />
-        <Mission />
-        <Ranking />
-        <Plan />
-        <Attention />
-        <Footer fn={clickToTop} scrollPacks={scrollPacks} />
+        {/* <Story /> */}
+        <Suspense fallback={renderLoader()}>
+          <LazyStory />
+          <LazyMission />
+          <LazyRanking />
+          <LazyPlan />
+          <LazyAttention />
+          <LazyFooter fn={clickToTop} scrollPacks={scrollPacks} />
+        </Suspense>
+        {/* <Footer fn={clickToTop} scrollPacks={scrollPacks} /> */}
         <Bg />
     </div>
   );

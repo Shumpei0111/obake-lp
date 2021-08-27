@@ -1,11 +1,16 @@
 // page
 export { default as FirstView } from './FirstView';
-export { default as Story }     from './Story';
-export { default as Mission }   from './Mission';
-export { default as Ranking }   from './Ranking';
-export { default as Plan }      from './Plan';
-export { default as Attention } from './Attention';
-export { default as Footer }    from './Footer';
+
+// Lazy Load Components
+//
+// export { default as Story }     from './Story';
+// export { default as Footer }    from './Footer';
+// export { default as Mission }   from './Mission';
+// export { default as Ranking }   from './Ranking';
+// export { default as Plan }      from './Plan';
+// export { default as Attention } from './Attention';
+//
+// Lazy Load Components
 
 // parts
 export { default as Asobo }      from './Asobo';

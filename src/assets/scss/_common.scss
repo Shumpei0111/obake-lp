@@ -28,6 +28,8 @@ h2 {
     margin-bottom: 40px;
     background: url(../img/label_bg.svg) no-repeat center;
     padding: 2.25rem;
+    z-index: 1;
+    position: relative;
 }
 
 p {
@@ -72,7 +74,7 @@ a {
 
 @-webkit-keyframes asobo {
     0% {opacity: 1;}
-    30% {opacity: 1;transform: scaleY(1.1);}
+    30% {opacity: 1;transform: scaleY(4);}
     50% {opacity: 1;transform: scaleY(10);}
     85% {opacity: 1;transform: scaleY(40);}
     100% {opacity: 0;transform: scaleY(100);}
@@ -81,7 +83,7 @@ a {
 
 @keyframes asobo {
     0% {opacity: 1;}
-    30% {opacity: 1;transform: scaleY(1.1);}
+    30% {opacity: 1;transform: scaleY(4);}
     50% {opacity: 1;transform: scaleY(10);}
     85% {opacity: 1;transform: scaleY(40);}
     100% {opacity: 0;transform: scaleY(100);}

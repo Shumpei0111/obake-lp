@@ -25,9 +25,33 @@
 
     .asobo__img {
         position: absolute;
-        top: 10vh;
+        top: 20vh;
+        right: 0;
+        left: 0;
+        text-align: center;
+        font-size: 18rem;
+        margin: auto;
+        filter: blur(2px);
         animation: asobo 3s steps(10) infinite;
         -webkit-animation: asobo 3s steps(10) infinite;
+        color: v.$red;
+
+        &.ah {
+            right: 30rem;
+            top: 7rem;
+            filter: blur(3px);
+        }
+
+        &.so {
+            right: 18rem;
+            top: 30rem;
+            transform: scaleY(1.3);
+        }
+
+        &.bo {
+            left: 9rem;
+            filter: blur(4px);
+        }
     }
 
     &.asobo__isLoaded {
