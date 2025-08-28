@@ -9,6 +9,18 @@ export default defineConfig({
   },
   build: {
     outDir: "dist",
-    sourcemap: true,
+    sourcemap: false,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ["react", "react-dom"],
+          gsap: ["gsap"],
+          p5: ["p5"],
+        },
+      },
+    },
+  },
+  define: {
+    global: "globalThis",
   },
 });

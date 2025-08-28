@@ -10,23 +10,50 @@
       content="架空の村の架空のお化け屋敷。日本初、廃校を使用した謎解きお化け屋敷です。"
     />
     <link rel="apple-touch-icon" href="/faviconx64.ico" />
-    <script src="https://kit.fontawesome.com/1fee6c6df8.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/1fee6c6df8.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="manifest" href="/manifest.json" />
     <!-- WebFont -->
     <script>
-      (function(d) {
+      (function (d) {
         var config = {
-          kitId: 'qyd1wva',
-          scriptTimeout: 3000,
-          async: true
-        },
-        h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+            kitId: "qyd1wva",
+            scriptTimeout: 3000,
+            async: true,
+          },
+          h = d.documentElement,
+          t = setTimeout(function () {
+            h.className =
+              h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+          }, config.scriptTimeout),
+          tk = d.createElement("script"),
+          f = false,
+          s = d.getElementsByTagName("script")[0],
+          a;
+        h.className += " wf-loading";
+        tk.src = "https://use.typekit.net/" + config.kitId + ".js";
+        tk.async = true;
+        tk.onload = tk.onreadystatechange = function () {
+          a = this.readyState;
+          if (f || (a && a != "complete" && a != "loaded")) return;
+          f = true;
+          clearTimeout(t);
+          try {
+            Typekit.load(config);
+          } catch (e) {}
+        };
+        s.parentNode.insertBefore(tk, s);
       })(document);
     </script>
     <!-- /WebFont -->
     <title>廃墟探索 | 謎解き×お化け屋敷</title>
-    <script type="module" crossorigin src="/assets/index-56beef78.js"></script>
-    <link rel="stylesheet" href="/assets/index-650033e4.css">
+    <script type="module" crossorigin src="/assets/index-b53a70f2.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/vendor-a95decd0.js">
+    <link rel="modulepreload" crossorigin href="/assets/p5-c1e21dda.js">
+    <link rel="modulepreload" crossorigin href="/assets/gsap-b472b792.js">
+    <link rel="stylesheet" href="/assets/index-9877a63b.css">
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
