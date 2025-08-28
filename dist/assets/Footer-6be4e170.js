@@ -1,0 +1,2 @@
+import{j as s,M as c,s as e,c as a}from"./index-56beef78.js";const r="/assets/footer-center-5acb81bd.svg",l="/assets/logo_yoko-9da5b7aa.svg",n=o=>{const t=()=>{o.fn()};return s.jsxs("div",{id:"footer",children:[s.jsx("img",{src:r,alt:"TOPへ戻る",className:"to_top_btn",onClick:t}),s.jsxs("div",{children:[s.jsx("img",{src:l,alt:"廃墟探索",className:"footer__logo"}),s.jsx(c,{type:"footer",scrollPacks:o.scrollPacks})]}),s.jsx("p",{className:"credit",children:e}),s.jsx("address",{className:"copyright",children:a})]})};export{n as default};
+//# sourceMappingURL=Footer-6be4e170.js.map

@@ -1,161 +1,163 @@
-@use './variables' as v;
+@use "./variables" as v;
 
 #firstView {
-    position: relative;
+  position: relative;
+  height: 100vh;
+  margin-bottom: 120px;
+
+  .top__bg__wrapper {
+    overflow: hidden;
+  }
+
+  .top__bg {
+    background-position: right;
+    background: url(../img/lorenz-huter-5jxFc5QlcAc-unsplash.jpg) fixed;
+    background-position: center left;
+    background-repeat: no-repeat;
+    filter: brightness(40%);
+    -webkit-filter: brightness(40%);
     height: 100vh;
-    margin-bottom: 120px;
+  }
+
+  .top__bg:after {
+    content: "";
+    animation: grain 8s steps(10) infinite;
+    -webkit-animation: grain 8s steps(10) infinite;
+    background-image: url(../img/nosie_cover2.png);
+    height: 300%;
+    width: 300%;
+    opacity: 0.3;
+    top: -100%;
+    left: -50%;
+    position: fixed;
+  }
+
+  .isLoaded {
+    opacity: 1;
+  }
+
+  .top__siteTitle {
+    animation: siteTitle 2s infinite;
+    position: absolute;
+    top: 20vh;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 170px;
+
+    .top__logo {
+      // width: 190px;
+      transition: 2s;
+      opacity: 0;
+      filter: drop-shadow(-2px 5px 4px #1f0000);
+
+      &.isLoaded {
+        @extend .isLoaded;
+      }
+    }
+  }
+
+  .top__catchCopy {
+    position: absolute;
+    top: 1.2rem;
+    margin: auto;
+    left: 0;
+    right: 0;
+    font-size: 1.6rem;
+    text-align: center;
+    opacity: 0;
+    transition: 2s;
+    text-shadow: v.$textShadow;
+
+    span {
+      color: v.$red;
+      font-weight: bold;
+    }
+
+    br {
+      display: none;
+    }
+
+    &.isLoaded {
+      @extend .isLoaded;
+    }
+  }
+
+  .top__intro {
+    position: absolute;
+
+    &.intro_1 {
+      right: 2rem;
+      bottom: 16rem;
+      font-size: 1.8rem;
+    }
+
+    &.intro_2 {
+      right: 2rem;
+      bottom: 11rem;
+      font-size: 1.8rem;
+    }
+
+    &.intro_3 {
+      right: 2rem;
+      bottom: 6rem;
+      font-size: 1.8rem;
+    }
+
+    &.intro_4 {
+      right: 2rem;
+      bottom: 1rem;
+      font-size: 2.4rem;
+      word-break: keep-all;
+    }
+  }
+
+  @media screen and (max-width: v.$spSize) {
+    .top__siteTitle {
+      top: 10vh;
+    }
 
     .top__bg__wrapper {
-        overflow: hidden;
-    }
+      height: 100vh;
 
-    .top__bg {
-        background-position: right;
-        background: url(../img/lorenz-huter-5jxFc5QlcAc-unsplash.jpg) fixed;
-        background-position: center left;
-        background-repeat: no-repeat;
-        filter: brightness(40%);
-        -webkit-filter: brightness(40%);
-        height: 100vh;
-    }
-
-    .top__bg:after {
-        content: "";
-        animation: grain 8s steps(10) infinite;
-        -webkit-animation: grain 8s steps(10) infinite;
-        background-image: url(../img/nosie_cover2.png);
-        height: 300%;
-        width: 300%;
-        opacity: 0.3;
-        top: -100%;
-        left: -50%;
-        position: fixed;
-    }
-
-    .isLoaded {
-        opacity: 1;
-    }
-    
-    .top__siteTitle {
-        animation: siteTitle 2s infinite;
-        position: absolute;
-        top: 20vh;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        margin: auto;
-        width: 170px;
-
-        .top__logo {
-            // width: 190px;
-            transition: 2s;
-            opacity: 0;
-            filter: drop-shadow(-2px 5px 4px #1F0000);
-            
-
-            &.isLoaded {
-                @extend .isLoaded;
-            }
-        }
+      .top__bg {
+        background-position: -900px;
+      }
     }
 
     .top__catchCopy {
-        position: absolute;
-        top: 1.2rem;
-        margin: auto;
-        left: 0;
-        right: 0;
-        font-size: 1.6rem;
-        text-align: center;
-        opacity: 0;
-        transition: 2s;
-        text-shadow: v.$textShadow;
+      font-size: 1.2rem;
 
-        span {
-            color: v.$red;
-            font-weight: bold;
-        }
-
-        br {
-            display: none
-        }
-
-        &.isLoaded {
-            @extend .isLoaded;
-        }
+      br {
+        display: block;
+      }
     }
 
     .top__intro {
-        position: absolute;
+      &.intro_1,
+      &.intro_2,
+      &.intro_3 {
+        font-size: 1.4rem;
+      }
 
-        &.intro_1 {
-            right: 2rem;
-            bottom: 16rem;
-            font-size: 1.8rem;
-        }
+      &.intro_1 {
+        bottom: 12rem;
+      }
+      &.intro_2 {
+        bottom: 9rem;
+      }
+      &.intro_3 {
+        bottom: 6rem;
+      }
 
-        &.intro_2 {
-            right: 2rem;
-            bottom: 11rem;
-            font-size: 1.8rem;
-        }
-
-        &.intro_3 {
-            right: 2rem;
-            bottom: 6rem;
-            font-size: 1.8rem;
-        }
-
-        &.intro_4 {
-            right: 2rem;
-            bottom: 1rem;
-            font-size: 2.4rem;
-            word-break: keep-all;
-        }
+      &.intro_4 {
+        font-size: 2rem;
+      }
     }
+  }
+}
 
-    @media screen and (max-width: v.$spSize) {
-        .top__siteTitle {
-            top: 10vh;
-        }
-
-        .top__bg__wrapper {
-            height: 100vh;
-
-            .top__bg {
-                background-position: -900px;
-            }
-        }
-
-        .top__catchCopy {
-            font-size: 1.2rem;
-
-            br {
-                display: block;
-            }
-        }
-
-        .top__intro {
-
-            &.intro_1,
-            &.intro_2,
-            &.intro_3 {
-                font-size: 1.4rem;
-            }
-
-            &.intro_1 {
-                bottom: 12rem;
-            }
-            &.intro_2 {
-                bottom: 9rem;
-            }
-            &.intro_3 {
-                bottom: 6rem;
-            }
-
-            &.intro_4 {
-                font-size: 2rem;
-            }
-        }
-    }
+#defaultCanvas1 {
+  display: none;
 }
